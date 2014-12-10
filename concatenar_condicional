@@ -1,0 +1,7 @@
+if (B){
+  z
+}else if (A){
+  x
+}else{
+  y
+}
