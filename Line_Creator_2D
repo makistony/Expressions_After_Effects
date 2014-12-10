@@ -1,0 +1,31 @@
+// Anchor Point
+
+[0,0]
+
+// Position
+
+try{
+var objF = thisComp.layer(index+1);
+objF.toWorld(objF.anchorPoint);
+}catch( $objE ){ [0,0] }
+
+// Scale
+
+var fltD = 100, objF, objT, arrF, arrT, intPA = thisComp.pixelAspect;
+try { objF= thisComp.layer(index+1);
+objT = thisComp.layer(index-1);
+arrF= objF.toWorld(objF.anchorPoint);
+arrT= objT.toWorld(objT.anchorPoint); 
+fltD = length([arrF[0]*intPA,arrF[1]],[arrT[0]*intPA,arrT[1]]);
+}catch( $objE ){} [fltD,100]
+
+// Rotation
+
+var fltR = 0;
+try
+{ var objSP = thisComp.layer(index+1);
+objEP = thisComp.layer(index-1);
+arrSP = objSP.toWorld(objSP.anchorPoint);
+arrEP = objEP.toWorld(objEP.anchorPoint);
+intPA = thisComp.pixelAspect;
+var fltR = radiansToDegrees( Math.atan2( arrSP[1]-arrEP[1], (arrSP[0]-arrEP[0])*intPA ) ) }catch( $objE ){} fltR-180
