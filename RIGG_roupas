@@ -1,0 +1,13 @@
+PelvisRot = thisComp.layer("A").transform.rotation;
+PernaRot  = thisComp.layer("B").transform.rotation;
+
+if(PernaRot<-58){
+		Roupa=0.5;
+}else{
+		Roupa=0;
+}
+
+PosX=value[0]-(PernaRot*Roupa);
+PosY=value[1]-(PelvisRot)+(PernaRot*Roupa*0.5);
+
+[PosX,PosY];
