@@ -1,0 +1,7 @@
+OPC = transform.opacity;
+VIS = thisComp.layer("controlador").effect("visibilidade")("Slider"); // Slide que controla a visibilidade das camadas
+if(VIS==0){
+	OPC = 100;
+}else{
+	OPC = 0;
+}
