@@ -1,5 +1,5 @@
 // position
-base = thisComp.layer("base layer"); // base layer
+base = thisComp.activeCamera; // base layer
 cPos = [320, 240, -1343.5]; // camera initial position
 
 ratio = length(position, cPos)/length(base.position,cPos);
@@ -10,7 +10,7 @@ newXY = (value[0],value[1]] - center)*ratio + center;
 
 // scale opção 1
 
-base = thisComp.layer("base layer"); // base layer
+base = thisComp.activeCamera; // base layer
 cPos = [320,240,-1343.5]; // camera initial position
 
 s = value[0]*length(position,cPos)/length(base.position,cPos);
