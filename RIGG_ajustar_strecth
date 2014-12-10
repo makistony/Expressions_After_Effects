@@ -1,0 +1,3 @@
+L = thisComp.layer("layer");
+v = L.toWorldVec([1,0,0]);
+radiansToDegrees(Math.atan2(v[1],v[0]))
