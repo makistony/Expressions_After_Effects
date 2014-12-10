@@ -1,0 +1,29 @@
+// Anchor Point
+
+[0,0,0]
+
+// Position
+
+try{
+var objF = thisComp.layer(index-1); // controlador"1"
+objF.toWorld(objF.anchorPoint);
+}catch( $objE ){ [0,0,0] }
+
+// Scale
+
+var fltD = 100, objF, objT, arrF, arrT, intPA = thisComp.pixelAspect;
+try { objF= thisComp.layer(index-1); // controlador"1"
+objT = thisComp.layer(index+1); // controlador"2"
+arrF= objF.toWorld(objF.anchorPoint);
+arrT= objT.toWorld(objT.anchorPoint); 
+fltD = length([arrF[0]*intPA,arrF[1],arrF[2]],[arrT[0]*intPA,arrT[1],arrT[2]]);
+}catch( $objE ){} [fltD,100]
+
+// Orientation
+
+var objT, arrF = position.value, arrT, intPA = thisComp.pixelAspect; 
+try{
+objT = thisComp.layer(index+1); // controlador"2"
+arrT= objT.toWorld(objT.anchorPoint); 
+lookAt( [arrF[0]*intPA,arrF[1],arrF[2]], [arrT[0]*intPA,arrT[1],arrT[2]] );
+}catch( $objE ){ [0,0,0] }
