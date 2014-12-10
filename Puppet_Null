@@ -1,0 +1,3 @@
+n=thisComp.layer("control layer");
+nullpos=n.toComp(n.anchorPoint);
+fromComp(nullpos); 
