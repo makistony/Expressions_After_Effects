@@ -1,0 +1,9 @@
+// Parentar posição por expressão 01
+
+lay = NomeDoLayer;
+wrld=lay.toWorld(lay.anchorPoint);
+[wrld[0],wrld[1],wrld[2]] 
+
+// Parentar posição por expressão 02
+
+layer1.toWorld(layer2.transform.position)
