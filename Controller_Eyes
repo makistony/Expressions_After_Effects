@@ -1,0 +1,30 @@
+// Position
+
+PosEIorig=[-600, -100]; // position original do controlador
+PosEI=comp("Head_Primary").layer("EyeInterest").transform.position; // layer controlados do olho
+transform.position+(PosEI-PosEIorig)*.5;
+
+
+// Scale Iris
+
+Scale=comp("Head_Primary").layer("EyeInterest").effect("Eye_Iris_Size")("Slider")
+
+ScaleX=transform.scale[0]+Scale;
+ScaleY=transform.scale[1]+Scale;
+[ScalerX,ScalerY]
+
+// Scale Pupil
+
+Scale=comp("Head_Primary").layer("EyeInterest").effect("Eye_Pupil_Size")("Slider")
+
+ScaleX=transform.scale[0]+Scale;
+ScaleY=transform.scale[1]+Scale;
+[ScalerX,ScalerY]
+
+// Position da Pupil com clamp aplicado
+
+limite1=[25,34];
+limite2=[75, 75];
+PosEIorig=[400, 500]; // position original do controlador
+PosEI=comp("Head_Primary").layer("EyeInterest").transform.position; // layer controlados do olho
+clamp((transform.position+(PosEI-PosEIorig)/10), limite1, limite2);
