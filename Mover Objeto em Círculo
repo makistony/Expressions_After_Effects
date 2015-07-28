@@ -1,0 +1,9 @@
+radius = 300;
+rate = 55;
+offset = 60;
+angle=time*rate+offset;
+x=radius*Math.cos(degreesToRadians(angle));
+y=radius*Math.sin(degreesToRadians(angle));
+z=0;
+centre=[960,540,0];
+add(centre, [x,y,z])
