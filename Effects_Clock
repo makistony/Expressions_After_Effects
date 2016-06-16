@@ -1,0 +1,1 @@
+transform.rotation+Math.floor(time)*6
