@@ -1,0 +1,3 @@
+targL = thisComp.layer("CamTarget"); // 3D Null
+
+lookAt(thisLayer.position, targL.position);
