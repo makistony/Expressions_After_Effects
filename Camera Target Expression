@@ -1,0 +1,5 @@
+targL = thisComp.layer("CamTarget");
+targLWSpace = targL.toWorld([0,0,0]);
+targLCamSpace = thisLayer.fromWorld(targLWSpace);
+
+lookAt([0,0,0], targLCamSpace);
