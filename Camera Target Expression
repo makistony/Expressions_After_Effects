@@ -1,4 +1,6 @@
-targL = thisComp.layer("CamTarget");
+// Put the code on the Orientation of camera
+
+targL = thisComp.layer("CamTarget"); // Create a null called "CamTarget"
 targLWSpace = targL.toWorld([0,0,0]);
 targLCamSpace = thisLayer.fromWorld(targLWSpace);
 
