@@ -1,0 +1,6 @@
+ // position ligado a escala x de outra camada
+lay_x = effect("Layer Control")("Layer").transform.scale[0] // Aplicar Layer Control a camada
+x = value[0]+ (height*lay_x/100);
+y = value[1];
+z = value[2];
+[x , y , z]
