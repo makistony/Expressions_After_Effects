@@ -2,6 +2,6 @@
 Cntrl = effect("Layer Control")("Layer"); // Aplicar Efeito Layer Control
 Spc_x = effect("Spc_x")("Slider"); // Aplicar Slide para controlar o espaço extra em x
 Spc_y = effect("Spc_y")("Slider"); // Aplicar Slide para controlar o espaço extra em y
-x = Cntrl.sourceRectAtTime().width + Spc_x;
-y = Cntrl.sourceRectAtTime().height + Spc_y;
+x = Cntrl.sourceRectAtTime(time - Cntrl.inPoint, true).width + Spc_x;
+y = Cntrl.sourceRectAtTime(time - Cntrl.inPoint, true).height + Spc_y;
 [x , y]
