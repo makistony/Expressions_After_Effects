@@ -1,0 +1,12 @@
+// aplicar no Path do shape layer
+
+s = thisComp.layer("Controls").effect("Orbit")("Point")[0]; // controlador
+if (numKeys > 1) {
+	k1 = key(1).time;
+	k2 = key(numKeys).time;
+	t = linear(s , -100 , 100 , k1 , k2);
+	valueAtTime(t);
+}else{
+	value
+}
+
